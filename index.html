@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/print.css" media="screen,print">
+    <title>База данных</title>
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="header__title">База данных</h1>
+    </header>
+    <main>
+        <div class="page">
+            <div class="container">
+                <div class="base">
+                    <table class="base-table" id="base-table">
+                    </table>
+                </div>
+                <div class="no-print">
+                    <div class="base-controls controls">
+                        <p class="base-controls__title">Панель управления</p>
+                        <div class="base-controls__wrapper">
+                            <input type=button name="btn1" class="base-controls__btn btn" value="Создать запись"
+                                onclick="AddControls();">
+                            <input type=button name="btn1" class="base-controls__btn btn" value="Изменить запись"
+                                onclick="UpdateControls();">
+                            <input type=button name="btn1" class="base-controls__btn btn" value="Удалить запись"
+                                onclick="RemoveControls();">
+                            <input type=button name="btn1" class="base-controls__btn btn" value="Отправить на печать"
+                                onclick="window.print()">
+                        </div>
+                    </div>
+                    <div class="controls controls_elem" id="form-input">
+                        <p class="controls__title">Заполните данные</p>
+                        <form action="#" class="controls-form" id="add-controls">
+                            <div class="controls-form__item">
+                                <div class="controls-form__wrapper controls-form__id" id="controls-form__id">
+                                    <p class="controls-form__title">Идентификатор</p>
+                                    <input class="controls-form__input" type="number" name="" id="inputId">
+                                </div>
+                                <div class="controls-form__wrapper controls-form__date" id="controls-form__date">
+                                    <p class="controls-form__title">Дата</p>
+                                    <input class="controls-form__input" type="date" name="" id="inputDate">
+                                </div>
+                                <div class="controls-form__wrapper controls-form__providername"
+                                    id="controls-form__providername">
+                                    <p class="controls-form__title">Наименование поставщика</p>
+                                    <input class="controls-form__input" type="text" name="" id="inputProviderName">
+                                </div>
+                                <div class="controls-form__wrapper controls-form__order" id="controls-form__order">
+                                    <p class="controls-form__title">Склад приемки</p>
+                                    <input class="controls-form__input" type="text" name="" id="inputOrder">
+                                </div>
+                                <div class="controls-form__wrapper controls-form__productname"
+                                    id="controls-form__productname">
+                                    <p class="controls-form__title">Наименование товара</p>
+                                    <input class="controls-form__input" type="text" name="" id="inputProductName">
+                                </div>
+                                <div class="controls-form__wrapper controls-form__count" id="controls-form__count">
+                                    <p class="controls-form__title">Количество</p>
+                                    <input class="controls-form__input" type="number" name="" id="inputCount">
+                                </div>
+                                <div class="controls-form__wrapper controls-form__price" id="controls-form__price">
+                                    <p class="controls-form__title">Сумма</p>
+                                    <input class="controls-form__input" type="number" name="" id="inputPrice">
+                                </div>
+                            </div>
+                            <div class="controls-form__controls">
+                                <input type="button" class="controls-form__btn btn" id="add-data" value="Применить"
+                                    onclick="AddData();">
+                                <input type="button" class="controls-form__btn btn" id="update-data" value="Применить"
+                                    onclick="UpdateData();">
+                                <input type="button" class="controls-form__btn btn" id="remove-data" value="Применить"
+                                    onclick="RemoveData();">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src=" ./js/database.js"></script>
+    <script src=" ./js/filter.js"></script>
+    <script src=" ./js/print.js"></script>
+    <script src=" ./js/base-controls.js"></script>
+</body>
+
+</html>
