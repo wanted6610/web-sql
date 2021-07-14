@@ -130,8 +130,6 @@ function UpdateDataDB(propertyName, propertyUpdate, id) {
     }
 }
 
-//id,date,providerName,storage,productName,count,price
-
 function GetData() {
     document.getElementById("base-table").innerHTML = GetHTML();
     db.transaction(function (tx) {
@@ -204,9 +202,3 @@ function OutRow(id, date, providerName, storage, productName, count, price) {
     row.appendChild(priceCell);
     document.getElementById("base-table").appendChild(row);
 }
-
-/*function ClearTable() {
-    let div = document.getElementById('base-table'); while (div.firstChild) {
-        div.removeChild(div.firstChild);
-    }
-} */
